@@ -13,9 +13,7 @@ from langdetect import detect
 import pythoncom
 
 
-# Configure Gemini API
-# os.environ['GOOGLE_API_KEY'] = "AIzaSyClhU6vG6SxWBluwDTdGoR6dAu-zncnghA"  # Replace with your actual API key
-# genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+
 
 # Configure Gemini API
 from dotenv import load_dotenv
@@ -23,7 +21,7 @@ load_dotenv()
 genai.configure(api_key=os.environ.get('GOOGLE_API_KEY'))
 
 # Initialize Gemini Model
-# model = genai.GenerativeModel(model_name="gemini-1.5-pro")
+
 model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 
 # Language code mapping (if needed)
